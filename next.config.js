@@ -10,6 +10,19 @@ module.exports = {
       test: /\.ya?ml$/,
       use: 'js-yaml-loader',
     })
+
+    cfg.module.rules.push({
+      test: /\.toml$/,
+      use: [
+        {
+          loader: 'raw-loader',
+          options: {
+            esModule: false,
+          },
+        },
+      ],
+    })
+
     return cfg
   },
 }

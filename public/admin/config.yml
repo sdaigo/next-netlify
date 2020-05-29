@@ -23,7 +23,8 @@ collections:
     files:
       - label: 'Services'
         name: 'services'
-        file: 'content/services.yml'
+        file: 'content/services.toml'
+        format: 'toml'
         fields:
           - label: 'Service'
             name: 'service'
