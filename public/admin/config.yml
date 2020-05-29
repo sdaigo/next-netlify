@@ -36,3 +36,16 @@ collections:
                   widget: 'markdown',
                 }
               - { label: 'Image', name: 'image', widget: 'image' }
+
+      - label: 'Clients'
+        name: 'clients'
+        file: 'content/clients.toml'
+        format: 'toml'
+        fields:
+          - label: 'Client'
+            name: 'client'
+            widget: list
+            fields:
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Slug', name: 'slug', widget: 'string' }
+              - { label: 'Logo', name: 'logo', widget: 'image' }
