@@ -5,20 +5,34 @@ display_url: https://tagbangers.co.jp
 media_folder: public/img
 public_folder: img
 publish_mode: editorial_workflow
+
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'blog'
+    label: 'Blog'
+    folder: '_posts/blog'
+    create: true
+    identifier_field: name
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'contents'
+    label: 'Contents'
     files:
-      - label: "Home"
-        name: "home"
-        file: "content/home.md"
+      - label: 'Services'
+        name: 'services'
+        file: 'content/services.yml'
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Publish Date", name: "date", widget: "datetime" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - label: "Cats"
-            name: "cats"
+          - label: 'Service'
+            name: 'service'
             widget: list
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: 'Heading', name: 'heading', widget: 'string' }
+              - {
+                  label: 'Description',
+                  name: 'description',
+                  widget: 'markdown',
+                }
+              - { label: 'Image', name: 'image', widget: 'image' }
