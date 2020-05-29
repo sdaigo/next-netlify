@@ -1,2 +1,4 @@
-[clients]
-
+[[client]]
+logo = "/img/aoi.png"
+name = "Tagbangers"
+slug = "tagbangers"
