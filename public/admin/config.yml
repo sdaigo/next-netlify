@@ -1,8 +1,10 @@
 backend:
   name: git-gateway
   branch: master
+display_url: https://tagbangers.co.jp
 media_folder: public/img
 public_folder: img
+publish_mode: editorial_workflow
 collections:
   - name: "pages"
     label: "Pages"
